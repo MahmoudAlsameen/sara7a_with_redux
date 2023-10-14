@@ -9,12 +9,6 @@ import { useQuery } from '@tanstack/react-query';
 import { useDispatch, useSelector } from "react-redux";
 import { getAllMessages  } from "../../Redux/MessagesSlice";
 
-const getMessages= async ()=>{
-  let {data} = await axios.get('https://sara7aiti.onrender.com/api/v1/message', {headers:{token:localStorage.getItem('userToken')}})
-  console.log('data is : ',data)
-return data.allMessages
-
-}
 
 export default function Profile() {
   const [show, setShow] = useState(false);
